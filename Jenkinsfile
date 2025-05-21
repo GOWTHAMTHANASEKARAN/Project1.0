@@ -7,7 +7,6 @@ pipeline {
 
     environment {
         DOCKERHUB_USERNAME = "gowthamthanasekaran"
-        IMAGE_NAME = "gowtham"
     }
 
     stages {
