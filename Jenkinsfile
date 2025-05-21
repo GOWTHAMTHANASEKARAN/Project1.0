@@ -58,9 +58,9 @@ pipeline {
 
               stage("Push to Docker Hub") { 
             steps { 
-                withCredentials([usernamePassword(credentialsId: 'cre', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) { 
+                { 
                     sh ''' 
-                        echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin 
+                        echo "Gowtham@bit7" | docker login -u "gowthamthanasekaram" --password-stdin 
                         docker tag gowtham $DOCKER_USER gowtham:latest 
                         docker push $DOCKER_USER gowtham :latest 
                     ''' 
